@@ -12,14 +12,7 @@ setGlobalArray('/todos')
         console.log(listDate);    
     }); 
 
-const getByPriority = (min, max) => {
-    const result = []
-    listDate.forEach((element) => {
-        if (min <= element.priority && element.priority <= max) {
-            result.push(element)
-        }
-    })
-    return result
-}
+const getByPriority = (min, max) => listDate.filter((element) => 
+        (min <= element.priority && element.priority <= max));
 
    
