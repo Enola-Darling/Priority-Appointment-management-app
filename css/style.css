@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #111111;
+}
+
+/* Header */
+header.title {
+  background-color: #080b53;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.priorityLogo {
+  color: #ffffff;
+}
+
+/* Priority Dates */
+.datesWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color:#00204a ;
+  height: 100vh;
+}
+
+.prioritizedDates {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* High Priority */
+.highPriority {
+  background-color: #e6e6e6;
+}
+
+.highPriority .dateType__tile {
+  color: #ffffff;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Medium Priority */
+.mediumPriority {
+  background-color: #e6e6e6;
+}
+
+div.mediumPriority .dateType__tile {
+  color: #ffffff;
+  background-color: #ffff00;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Low Priority */
+.lowPriority {
+  background-color: #e6e6e6;
+}
+
+.lowPriority .dateType__tile {
+  color: #ffffff;
+  background-color: #00ff00;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Date Item */
+.dateItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.dateTile {
+  flex: 1;
+}
+
+.dateTime {
+  margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Adjust styling for smaller screens */
+  header.title {
+    padding: 10px;
+  }
+  
+  .datesWrapper {
+    flex-wrap: wrap;
+   
+  }
+  
+  .prioritizedDates {
+    width: 100%;
+    margin: 10px;
+  }
+}
