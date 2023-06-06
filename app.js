@@ -1,7 +1,16 @@
 import { setGlobalArray} from "./utils/http.js";
-import { getRandomDate} from "./utils/function.js";
+import { datesGen, getRandomDate } from "./utils/function.js";
+
+const getByPriority = (min, max) => listDate.filter((element) => 
+        (min <= element.priority && element.priority <= max)).sort((a, b) => 
+            a.date - b.date || a.priority - b.priority);
 
 let listDate = []
+
+const highPriorityWrapperEl = document.querySelector("#highPriorityDates .datesItems"); 
+const mediumPriorityWrapperEl = document.querySelector("#mediumPriorityDates .datesItems"); 
+const lowPriorityWrapperEl = document.querySelector("#lowPriorityDates .datesItems");
+
 
 setGlobalArray('/todos')
     .then(data => {
@@ -10,10 +19,11 @@ setGlobalArray('/todos')
             element.date = getRandomDate(new Date('2023-01-01'), new Date('2023-12-31'))
             return element
         });
-        console.log(listDate);    
+        console.log(listDate);
+        const arrHighPriority = getByPriority(4, 6);
+        const arrMediumPriority = getByPriority(2, 4);
+        const arrLowPriority = getByPriority(0, 1);    
+        datesGen(arrHighPriority, highPriorityWrapperEl);
+        datesGen(arrMediumPriority, mediumPriorityWrapperEl);
+        datesGen(arrLowPriority, lowPriorityWrapperEl);
     }); 
-
-const getByPriority = (min, max) => listDate.filter((element) => 
-        (min <= element.priority && element.priority <= max));
-
-   

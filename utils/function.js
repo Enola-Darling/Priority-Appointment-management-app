@@ -8,7 +8,8 @@ export function getRandomDate(startDate, endDate) {
 
 export const createEL = (type) => document.createElement(type);
 
-export const datesContent = (item, parent) => {
+export const getDatesContentEl = (item) => {
+    
     const dateItemEl = createEL("div");
     const dateEl = createEL("div");
     const dateTileEl = createEL("div");
@@ -18,17 +19,23 @@ export const datesContent = (item, parent) => {
     dateEl.className = "date"
     dateTileEl.className = "dateTile"
     dateTimeEl.className = "dateTime"
-    dateEl.textContent = item.date.tiLocaleDateString()
+    dateEl.textContent = item.date.toLocaleDateString()
     dateTileEl.textContent = item.title
     dateTimeEl.textContent = item.date.toLocaleTimeString()
 
-    dateItemEl.append(dateEl, dateTileEl, dateTimeEl);
-    parent.append(dateItemEl);
+    if (item.completed) {
+        dateItemEl.classList.add("completedDate");
+    }
 
+    dateItemEl.append(dateEl, dateTileEl, dateTimeEl);
+    return dateItemEl
 }
 
 export const datesGen = (arr, parent) => {
-    arr.forEach(element => {
-        datesContent(element, parent)
+    parent.innerHTML = "";
+    arr.forEach(e => {
+        const element = getDatesContentEl(e)
+        parent.append(element);
+
     });
 }
