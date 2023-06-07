@@ -10,7 +10,7 @@ let listDate = []
 const highPriorityWrapperEl = document.querySelector("#highPriorityDates .datesItems"); 
 const mediumPriorityWrapperEl = document.querySelector("#mediumPriorityDates .datesItems"); 
 const lowPriorityWrapperEl = document.querySelector("#lowPriorityDates .datesItems");
-
+const completedButtonEl = document.querySelector(".completedButton");
 
 setGlobalArray('/todos')
     .then(data => {
@@ -27,3 +27,5 @@ setGlobalArray('/todos')
         datesGen(arrMediumPriority, mediumPriorityWrapperEl);
         datesGen(arrLowPriority, lowPriorityWrapperEl);
     }); 
+
+   
