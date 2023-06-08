@@ -1,10 +1,10 @@
-
 /* Header */
+
 header.title {
-  background-color:var(--color-header-title);
+  background-color: var(--color-header-title);
   display: flex;
   padding: 20px;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 .completedButton {
@@ -17,31 +17,31 @@ header.title {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-size: 15px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 button:hover {
   letter-spacing: 3px;
   background-color: hsl(0, 0%, 100%);
-  color:  hsl(261deg 80% 48%);
+  color: hsl(261deg 80% 48%);
   box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
- }
+}
 
- button:active {
+button:active {
   letter-spacing: 3px;
   background-color: hsl(0, 0%, 100%);
   color: hsl(261deg 80% 48%);
   box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
   /* transform: translateY(10px); */
   transition: 100ms;
- }
-
-
-.priorityLogo {
-  color: #ffffff;
 }
 
+
 /* Priority Dates */
+
 .datesWrapper {
+  /* max-width:  1440px;
+  width: 100%;
+  margin: 0 auto; */
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -51,62 +51,65 @@ button:hover {
 .prioritizedDates {
   margin: 20px;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 7px;
+  box-shadow: 2px 1px 2px 1px rgba(36, 36, 36, 0.7);
 }
 
 /* High Priority */
 .highPriority {
-  background-color:var(--color-date-background);
-  border-radius: 5px;
+  background-color: var(--color-date-background);
+  box-shadow: 2px 1px 2px 1px rgba(36, 36, 36, 0.7);
 }
 
 .highPriority .dateType__tile {
   color: #ffffff;
-  text-shadow: 2px 3px 2px rgba(0,0,0,0.1);
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing:1.5px;
-  background-color:var( --color-high-red);
+  letter-spacing: 1.5px;
+  background-color: var(--color-high-red);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.7) ;
+  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.7);
 }
 
 /* Medium Priority */
 .mediumPriority {
-  background-color:var(--color-date-background);
+  background-color: var(--color-date-background);
+  box-shadow: 2px 1px 2px 1px rgba(36, 36, 36, 0.7);
 }
 
 .mediumPriority .dateType__tile {
   color: #ffffff;
-  text-shadow: 2px 3px 2px rgba(0,0,0,0.1);
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing:1.5px;
+  letter-spacing: 1.5px;
   background-color: var(--color-medimu-yellow);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.4) ;
+  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.4);
 }
 
 /* Low Priority */
 .lowPriority {
   background-color: var(--color-date-background);
+  box-shadow: 2px 1px 2px 1px rgba(36, 36, 36, 0.7);
 }
 
 .lowPriority .dateType__tile {
   color: #ffffff;
-  text-shadow: 2px 3px 2px rgba(0,0,0,0.1);
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
   font-size: 20px;
   font-weight: 700;
-  letter-spacing:1.5px;
+  letter-spacing: 1.5px;
   background-color: var(--color-low-green);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
-  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.7) ;
+  box-shadow: 0px 1px 2px 0px rgba(36, 36, 36, 0.7);
 }
 
 /* Date Item */
@@ -123,60 +126,83 @@ button:hover {
 
 .dateItem:hover {
   transform: translateY(-5px);
-  box-shadow: 10px 15px 25px  rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.25);
 }
-.completedDate{
-  background-color:var(--color-border-red);
- /* border: 2px solid ;
+.completedDate {
+  background-color: var(--color-border-red);
+  /* border: 2px solid ;
  border-color: var(--color-border-red); */
+}
+.iconWrapper {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+
+}
+
+.fa-clock {
+  font-weight: 900;
+  display: flex;
+  gap: 5px;
+  color: var(--color-text-light);
+}
+
+.infoDateWrapper {
+  display: flex;
 }
 
 .date {
+  border-right: 1.5px solid;
+  border-color: var(--color-text-light);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
   margin-right: 10px;
   font-weight: bold;
-
 }
 
 .dateTile {
   font-size: 15px;
-  font-weight: 500;
-  flex: 1;
-
+  font-weight: 700;
 }
 
 .dateTime {
-  margin-left: 10px;
+ 
+}
+
+.completedButton.active {
+  background-color: rgb(139, 109, 195);
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* Adjust styling for smaller screens */
   header.title {
     padding: 5px;
   }
-  
+
   .datesWrapper {
     flex-wrap: wrap;
   }
-  
+
   .prioritizedDates {
     width: 100%;
     margin: 10px;
   }
-  
+
   /* Responsive font sizes */
   .completedButton {
     font-size: 13px;
   }
-  
+
   .dateType__tile {
     font-size: 18px;
   }
-  
+
   .dateItem {
     padding: 20px;
   }
-  
+
   .dateTile {
     font-size: 13px;
   }
@@ -184,28 +210,26 @@ button:hover {
 
 /* Desktop version */
 @media screen and (min-width: 1024px) {
- 
   .datesWrapper {
     justify-content: center;
     max-width: auto;
     margin: 0 auto;
   }
-  
+
   .completedButton {
     font-size: 18px;
   }
-  
+
   .dateType__tile {
     font-size: 24px;
   }
-  
+
   .dateTile {
     font-size: 18px;
   }
 }
 /* Media Queries mobile */
 @media screen and (max-width: 768px) {
-
   .completedButton {
     margin-right: 20px;
     padding: 8px 18px;
@@ -216,34 +240,34 @@ button:hover {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 15px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   header.title {
     padding: 5px;
   }
-  
+
   .datesWrapper {
     flex-wrap: wrap;
   }
-  
+
   .prioritizedDates {
     width: 100%;
     margin: 10px;
   }
-  
+
   .completedButton {
     font-size: 13px;
   }
-  
+
   .dateType__tile {
     font-size: 18px;
   }
-  
+
   .dateItem {
     padding: 20px;
   }
-  
+
   .dateTile {
     font-size: 13px;
   }

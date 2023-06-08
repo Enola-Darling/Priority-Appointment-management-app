@@ -28,4 +28,24 @@ setGlobalArray('/todos')
         datesGen(arrLowPriority, lowPriorityWrapperEl);
     }); 
 
-   
+let buttonIsClicked = false;
+completedButtonEl.addEventListener("click", (e) => {
+    buttonIsClicked = !buttonIsClicked;
+    let arrHighPriority = getByPriority(4, 6);
+    let arrMediumPriority = getByPriority(2, 4);
+    let arrLowPriority = getByPriority(0, 1);
+    
+    const filter = (x) => x.completed;
+    if (!buttonIsClicked) {
+        arrHighPriority = arrHighPriority.filter(filter);
+        arrMediumPriority = arrMediumPriority.filter(filter);
+        arrLowPriority = arrLowPriority.filter(filter);
+        completedButtonEl.classList.add("active");
+    } else {
+        completedButtonEl.classList.remove("active");
+    }
+    datesGen(arrHighPriority, highPriorityWrapperEl);
+    datesGen(arrMediumPriority, mediumPriorityWrapperEl);
+    datesGen(arrLowPriority, lowPriorityWrapperEl);
+});
+
