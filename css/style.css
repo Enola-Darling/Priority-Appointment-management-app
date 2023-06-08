@@ -7,6 +7,9 @@ header.title {
   justify-content: space-between;
   align-items: center;
 }
+.priorityLogo {
+  padding-left: 20px;
+}
 .completedButton {
   margin-right: 20px;
   padding: 10px 30px;
@@ -34,7 +37,6 @@ button:active {
   /* transform: translateY(10px); */
   transition: 100ms;
 }
-
 
 /* Priority Dates */
 
@@ -137,7 +139,6 @@ button:active {
   display: flex;
   margin-top: 10px;
   gap: 10px;
-
 }
 
 .fa-clock {
@@ -167,18 +168,16 @@ button:active {
 }
 
 .dateTime {
- 
 }
 
 .completedButton.active {
   background-color: rgb(139, 109, 195);
 }
 
-/* Media Queries */
+/* Desktop version */
 @media screen and (max-width: 1024px) {
-  /* Adjust styling for smaller screens */
   header.title {
-    padding: 5px;
+    padding: 15px;
   }
 
   .datesWrapper {
@@ -208,26 +207,6 @@ button:active {
   }
 }
 
-/* Desktop version */
-@media screen and (min-width: 1024px) {
-  .datesWrapper {
-    justify-content: center;
-    max-width: auto;
-    margin: 0 auto;
-  }
-
-  .completedButton {
-    font-size: 18px;
-  }
-
-  .dateType__tile {
-    font-size: 24px;
-  }
-
-  .dateTile {
-    font-size: 18px;
-  }
-}
 /* Media Queries mobile */
 @media screen and (max-width: 768px) {
   .completedButton {
@@ -244,7 +223,7 @@ button:active {
   }
 
   header.title {
-    padding: 5px;
+    padding: 15px;
   }
 
   .datesWrapper {
